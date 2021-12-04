@@ -16,9 +16,9 @@ app.config.from_pyfile('config.cfg')
 
 app.secret_key = 'your secret key'
 
-app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_HOST'] = 'host'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'meenu1234'
+app.config['MYSQL_PASSWORD'] = 'password'
 app.config['MYSQL_DB'] = 'buildfh'
 
 
@@ -193,7 +193,7 @@ def regevent():
              token = s.dumps(email, salt='email-confirm')
              session['token']=token
 
-             msg = Message('Confirm Email', sender='pdpprojectmail@gmail.com', recipients=[email])
+             msg = Message('Confirm Email', sender='user@gmail.com', recipients=[email])
 
              link = url_for('confirm_email', token=token, _external=True)
 
