@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+       <meta charset="UTF-8">
+       <title> Confirm </title>
+       <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   </head>
+   <body style="background-color:#ffffff"></br></br></br></br></br>
+       <div align="center">
+         <div align="center" class="border">
+         </br></br></br>
+           <h2>Will you attend the event "{{eventtitle}}" ?</h2></br></br>
+           <p>{{msg}}</p>
+           </br>
+           <form  action="{{ url_for('confirm_email') }}" method="post">
+             <input type="radio" id="yes" name="yn" value="yes">
+             <label for="yes">YES</label><br>
+             <input type="radio" id="no" name="yn" value="no">
+             <label for="no">NO</label><br>
+             <input type="radio" class="rf" name="yn" value="" checked>
+             </br></br></br></br></br></br>
+             <input type="submit" class="btn" value="Confirm"></br>
+           </form>
+
+         </div>
+       </div>
+   </body>
+</html>

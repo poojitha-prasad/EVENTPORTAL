@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+       <meta charset="UTF-8">
+       <title> Confirm </title>
+       <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   </head>
+   <body style="background-color:#ffffff"></br></br></br></br></br>
+       <div align="center">
+         <div align="center" class="border">
+           <div class="header">
+            <p class="ps" >Events Attended</p></div></br></br></br></br></br>
+              
+                      <div class="tbl-headerat">
+                        <table class="scrolldownat" cellpadding="0" cellspacing="0" border="0">
+                          <thead class="scrolldownat">
+                            <tr>
+                              <th>EVENTS</th>
+
+
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                      <div class="tbl-contentat">
+                        <table class="scrolldownat" cellpadding="0" cellspacing="0" border="0">
+                          <tbody class="scrolldownat">
+                            {% for ete in attended %}
+                            <tr>
+                            <td>  {{ete.eve}}</td>
+                            </tr>
+
+                            {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+
+
+                        </br></br></br></br>
+
+
+                        <a href="{{url_for('loginhome')}}" >
+                            <button  class="btn">Back</button></a>
+
+
+       </div>
+   </body>
+</html>

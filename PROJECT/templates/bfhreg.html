@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Register </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body style="background-color:#ffffff"></br></br></br>
+        <div align="center">
+          <div align="center" class="borderreg">
+             <div class="header">
+                <h1 class="word">Register</h1>
+             </div></br></br></br>
+            <h2 class="word">
+                <form action="{{ url_for('register') }}" method="post">
+                  <div class="msg">{{ msg }}</div></br>
+                    <input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/></br></br>
+                    <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br>
+                    <input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/></br></br>
+                    <select id="semester" name="semester" class="textbox">
+                      <option value="" selected="selected">Select Semester</option>
+                      <option value='S1'>S1</option>
+                      <option value='S2'>S2</option>
+                      <option value='S3'>S3</option>
+                      <option value='S4'>S4</option>
+                      <option value='S5'>S5</option>
+                      <option value='S6'>S6</option>
+                      <option value='S7'>S7</option>
+                      <option value='S8'>S8</option>
+                    </select></br></br>
+                    <select id="branch" name="branch" class="textbox">
+                      <option value="" selected="selected">Select Branch</option>
+                      <option value='ECE'>ECE</option>
+                      <option value='EEE'>EEE</option>
+                      <option value='CSE'>CSE</option>
+                      <option value='EIE'>EIE</option>
+                    </select></br></br>
+                    <input type="submit" class="btn" value="Sign Up"></br>
+                </form>
+            </h2>
+            <p >Already have an account?  <a class="bottom" href="{{url_for('login')}}"> Sign In here</a></p>
+          </div>
+        </div>
+    </body>
+</html>

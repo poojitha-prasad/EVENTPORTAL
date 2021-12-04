@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> EVENTS </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body ></br></br></br></br></br>
+        <div align="center">
+          <div align="center" class="borderrev">
+             <div class="header">
+                <h1 class="word">Events</h1>
+             </div></br></br></br>
+
+
+        <div class="tbl-headere">
+          <table class="scrolldowne" cellpadding="0" cellspacing="0" border="0">
+            <thead class="scrolldowne">
+              <tr>
+                <th>EVENT TITLE</th>
+                <th>DATE AND TIME</th>
+                <th>LOCATION</th>
+                <th>MAXIMUM PARTICIPANTS</th>
+                <th>DESCRIPTION</th>
+
+
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-contente">
+          <table class="scrolldowne" cellpadding="0" cellspacing="0" border="0">
+            <tbody class="scrolldowne">
+              {% for item in eventdetails %}
+            <tr>
+        <td>  {{item.eventtitle}}</td>
+
+                <td>{{item.eventdatetime}}</td>
+                <td>{{item.eventlocation}}</td>
+                <td>{{item.maxpart}}</td>
+                <td>{{item.eventdesc}}</td>
+              </tr>
+
+              {% endfor %}
+
+            </tbody>
+          </table>
+        </div>
+
+
+            <form action="{{ url_for('events') }}" method="post">
+            <p >Choose an event to see the participants list
+                   <select id="eventp" name="eventp" class="textboxre1">
+              <option value="" selected="selected">Events</option>
+             {% for e in eventname %}
+              <option value="{{e.eventtitle}}"> {{e.eventtitle}} </option>
+              {% endfor %}
+             </select>
+             &emsp;
+
+             <input type="submit" class="btn" value="List">&emsp; {{msg}}</br></p>
+            </form>
+
+
+
+          <div class="tbl-headerat">
+            <table class="scrolldownat" cellpadding="0" cellspacing="0" border="0">
+              <thead class="scrolldownat">
+                <tr>
+                  <th>PARTICIPANTS LIST OF {{eventp}}</th>
+
+
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tbl-contentat">
+            <table class="scrolldownat" cellpadding="0" cellspacing="0" border="0">
+              <tbody class="scrolldownat">
+                {% for itema in eventpp %}
+                <tr>
+                <td>  {{itema.username}}</td>
+                </tr>
+
+                {% endfor %}
+
+              </tbody>
+            </table>
+          </div>
+
+
+          </br>
+             <a href="{{url_for('regevent')}}" >
+                 <button  class="btnev">Back</button></a>
+
+
+          </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> WELCOME </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body ></br></br></br></br></br>
+        <div align="center">
+          <div align="center" class="borderwel">
+             <div class="headerwel">
+                <h2 class="wordwel">WELCOME TO FIESTA EVENT PORTAL </h2>
+             </div>
+           </br></br></br>
+
+                <p class="upe">Upcoming EVENTS</p>
+              </br>
+
+                <div class="tbl-header">
+                  <table class="scrolldownwel" cellpadding="0" cellspacing="0" border="0">
+                    <thead class="scrolldownwel">
+                      <tr>
+                        <th>EVENT TITLE</th>
+                        <th>DATE AND TIME</th>
+
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class="tbl-content">
+                  <table class="scrolldownwel" cellpadding="0" cellspacing="0" border="0">
+                    <tbody class="scrolldownwel">
+
+                      {% for item in eventdetailsw %}
+                    <tr>
+                        <td>{{item.eventtitle}}</td>
+                        <td>{{item.eventdatetime}}</td>
+
+                      </tr>
+                      {% endfor %}
+
+                    </tbody>
+                  </table>
+                </div>
+
+
+
+</br></br>
+
+               <p>  <a href="{{url_for('login')}}" >
+                   <button  class="btn">Continue</button></a></p>
+
+
+
+
+
+          </div>
+        </div>
+    </body>
+</html>

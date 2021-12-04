@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> HOME </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body style="background-color:#ffffff"></br></br></br></br></br>
+        <div align="center">
+          <div align="center" class="borderlh">
+             <div class="header">
+                <h1 class="word">Home</h1>
+             </div></br>
+
+
+                  {% for e in accountd %}
+
+                    <p class="new">Name:{{e.username}}</p>
+                    <p class="new">Semester:{{e.semester}}<p>
+                    <p class="new">Branch:{{e.branch}}</p>
+
+                  {% endfor %}
+
+
+
+
+                <a class="bottom" href="{{url_for('addevent')}}">Add Events</a></br></br>
+               <a class="bottom" href="{{url_for('regevent')}}"> Register for Events</a></br></br>
+              <a class="bottom" href="{{url_for('attendance')}}">Events you Attended</a>
+
+
+              </br></br>
+
+              <p class="upe">Upcoming EVENTS you registered</p>
+
+          
+
+         <div class="tbl-headerw">
+           <table class="scrolldownw" cellpadding="0" cellspacing="0" border="0">
+             <thead class="scrolldownw">
+               <tr>
+                 <th>EVENT TITLE</th>
+                 <th>DATE AND TIME</th>
+                 <th>LOCATION</th>
+
+               </tr>
+             </thead>
+           </table>
+         </div>
+         <div class="tbl-contentw">
+           <table class="scrolldownw" cellpadding="0" cellspacing="0" border="0">
+             <tbody class="scrolldownw">
+               {% for item in eventdetailslh %}
+               <tr>
+               <td>{{item.et}}</td>
+               <td>{{item.ed}}</td>
+               <td>{{item.cee}}</td>
+
+               </tr>
+               {% endfor %}
+
+             </tbody>
+           </table>
+         </div>
+
+
+</br>
+                <form action="{{ url_for('logout') }}" >
+                    <input type="submit" class="btn" value="Logout"></br></br>
+                </form>
+
+
+          </div>
+        </div>
+    </body>
+</html>

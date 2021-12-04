@@ -1,0 +1,38 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>EVENT REGISTER</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body ></br></br></br></br></br>
+        <div align="center">
+          <div align="center" class="borderre">
+             <div class="headerre">
+                <h1 class="wordre">Event Registration</h1>
+             </div></br></br>
+
+
+<form action="{{ url_for('regevent') }}" method="post">
+<h3><div class="msga">{{msga}}</div></h3>
+<p >Choose an event you want to register       <select id="eventsnamea" name="eventsnamea" class="textboxre1">
+  <!--<option value="" selected="selected">Events</option>-->
+ {% for e in eventname %}
+  <option value="{{e.eventtitle}}" selected=disabled> {{e.eventtitle}} </option>
+  {% endfor %}
+ </select></p>
+</br></br>
+<a class="bottom" href="{{url_for('events')}}">Details of Events<a>
+</br></br></br>
+  <input type="submit" class="btn1" value="Register"></br>
+</form>
+
+           </br></br></br></br>
+
+             <a href="{{url_for('loginhome')}}" >
+                 <button  class="btn">Back</button></a>
+
+          </div>
+        </div>
+    </body>
+</html>
