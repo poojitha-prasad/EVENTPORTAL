@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Event</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    </head>
+
+    <body>
+    </br>
+        <div align="center" >
+          <div align="center" class="borderadd">
+             <div class="header">
+                <h1 class="word">EVENT</h1>
+             </div></br>
+          <p class="msg">{{ msg }}</p>
+            <h5 class="wordpn">
+               <form action="{{ url_for('addevent') }}" method="post">
+
+                    <p> Event Title &emsp; <input id="Event_Title" name="Event_Title" type="text"  class="textboxadde"/></p></br>
+                    <p>Date and Time &emsp;<input id="DateTime" name="DateTime" type="datetime-local" class="textboxaddd"/></p></br>
+                    <p>Location &emsp; <input id="Location" name="Location" type="text"  class="textboxaddl"/></p></br>
+                    <p>Max: Participants &emsp;<input id="maxnum" name="maxnum" type="text" class="textboxaddm"/></p></br>
+                    <p>Event Description &emsp;<input id="Event_desc" name="Event_desc" type="textarea" class="textboxadded"/></p></br>
+                    <input type="submit" class="btns" value="Submit"></br>
+                </form>
+            </h5>
+
+          </br>
+
+            <a href="{{url_for('loginhome')}}" >
+                <button  class="btn">Back</button></a>
+
+          </div>
+        </div>
+    </body>
