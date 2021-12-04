@@ -9,17 +9,6 @@ This event portal is a user friendly one. Using this event portal we can create 
 
 
 
-##Team Members
-1. Poojitha Prasad [poojitha-prasad]
-2.Pooja M [poojamothi]
-
-
-##Team Id
-BFH/recIBV1ku3o8GIgdH/2021
-
-##Link to Product walkthrough
-
-https://drive.google.com/file/d/1-7SIpZzS0UeMCjgA5orBxAYWWoLyddRh/view
 
 ##How it Works?
 
