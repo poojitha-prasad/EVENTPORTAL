@@ -7,7 +7,8 @@ Python Flask Project
 This event portal is a user friendly one. Using this event portal we can create a unique account and register all events in our college. We can also add events with criteria like max participants, location and date and time. A confirmation email will be send to the delegate after then event is registered. Clicking on a event  shows all registered attendees for that event. A list of upcoming events are listed in the portal. Inspite of all these advantages it also has its own demerits.
 
 
-
+#link to product Walkthrough
+https://drive.google.com/file/d/15I5fK8RC4wzPUqNyftg9ybw4crAoEbdZ/view?usp=drivesdk
 
 
 ##How it Works?
